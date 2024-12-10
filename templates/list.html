@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+
+</head>
+<body>
+    <form method="POST" action="{{url_for('instalar_lista_musicas')}}">
+        <h1>Escreva a lista de músicas:</h1>
+        <textarea id="musicas" name="musicas" rows="10" cols="40" placeholder="Digite uma música por linha" required></textarea>
+        <button type="submit">Instalar Músicas</button>
+    </form>
+</body>
+</html>

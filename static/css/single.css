@@ -1,0 +1,52 @@
+/* Definir a fonte para Arial, sans-serif em toda a página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centralizar o título h1 */
+h1 {
+    text-align: center;
+    margin-top: 100px; /* Espaço acima do título */
+    margin-bottom: 50px; /* Espaço abaixo do título para separar da caixa */
+}
+
+/* Centralizar o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaço entre os elementos do formulário */
+}
+
+/* Estilizar a caixa de texto */
+input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima da caixa de texto */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000; /* Contorno da caixa de texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaço abaixo da caixa de texto */
+}
+
+/* Estilizar o botão */
+button {
+    padding: 20px 40px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05);  /* Leve aumento no tamanho da caixa */
+
+}

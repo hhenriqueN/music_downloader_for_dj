@@ -1,0 +1,51 @@
+/* Definir a fonte para Arial, sans-serif em toda a página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centralizar o título h1 */
+h1 {
+    text-align: center;
+    margin-top: 100px; /* Espaço acima do título */
+    margin-bottom: 100px; /* Espaço abaixo do título para separar das caixas */
+
+}
+
+/* Estilizar as caixas */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto; /* Centraliza as caixas */
+    padding: 20px;
+    border: 2px solid #000; /* Contorno ao redor da caixa */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    transition: all 0.3s ease; /* Suaviza o efeito de transição */
+}
+
+/* Efeito hover na caixa */
+.box:hover {
+    background-color: #e0e0e0;  /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05);  /* Leve aumento no tamanho da caixa */
+}
+
+/* Estilizar o conteúdo dentro das caixas */
+.box-content {
+    text-align: center;
+}
+
+.box-link {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: black;
+}
+
+/* Efeito hover no link da caixa */
+.box-link:hover {
+    color: #333;  /* Muda a cor do texto ao passar o mouse */
+}

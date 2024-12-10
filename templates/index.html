@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+    <h1>Escolha o tipo de instalação:</h1>
+
+    <div class="boxes">
+        <a href="{{ url_for('track_per_time') }}" class="box-link">
+            <div class="box">
+                <h2 class="title">Uma música por vez</h2>
+            </div>
+        </a>
+
+        <a href="{{ url_for('track_list') }}" class="box-link">
+            <div class="box">
+                <h2 class="title">Lista de músicas</h2>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
