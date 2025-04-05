@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso!</title>
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1{
+            margin-top: 70px;
+            text-align: center;
+        }
+        /* Estilizar o botão */
+        button {
+            margin-top: 20px;
+            padding: 20px 40px;
+            font-size: 22px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50; /* Cor de fundo do botão */
+            color: white;
+            transition: all 0.3s ease; /* Suaviza o efeito de transição */
+        }
+
+        /* Efeito hover no botão */
+        button:hover {
+            background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+            transform: scale(1.05);  /* Leve aumento no tamanho da caixa */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Download Completo!</h1>
+
+    <!-- Botão de redirecionamento -->
+    <form action="{{ url_for('track_list') }}" method="GET">
+        <button type="submit">Instalar outra lista</button>
+    </form>
+
+</body>
+</html>

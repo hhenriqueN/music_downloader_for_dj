@@ -24,7 +24,7 @@ def baixar_audio(url, nome_arquivo, pasta_destino):
             'outtmpl': caminho_completo,
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
-                'preferredcodec': 'mp3',
+                'preferredcodec': 'wav',
                 'preferredquality': '192',
             }],
         }

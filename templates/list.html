@@ -1,16 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Downloader</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
-
+    <script>
+        // Função para exibir a mensagem quando o botão for clicado
+        function showInstallStatus() {
+            document.getElementById("installingMessage").style.display = "block";  // Torna a mensagem visível
+        }
+    </script>
 </head>
 <body>
-    <form method="POST" action="{{url_for('instalar_lista_musicas')}}">
+
+    <form method="POST" action="{{ url_for('instalar_lista_musicas') }}" onsubmit="showInstallStatus()">
         <h1>Escreva a lista de músicas:</h1>
         <textarea id="musicas" name="musicas" rows="10" cols="40" placeholder="Digite uma música por linha" required></textarea>
         <button type="submit">Instalar Músicas</button>
     </form>
+
+    <!-- Mensagem de status que será exibida ao clicar no botão -->
+    <p id="installingMessage" style="display:none;">Suas músicas estão sendo instaladas...</p>
+
+    {% if status_lista_instalada %}
+        <p>{{ status_lista_instalada }}</p>
+    {% endif %}
+
 </body>
 </html>

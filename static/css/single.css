@@ -13,6 +13,11 @@ h1 {
     margin-bottom: 50px; /* Espaço abaixo do título para separar da caixa */
 }
 
+p{
+    text-align: center;
+    margin-top: 50px
+}
+
 /* Centralizar o formulário */
 form {
     display: flex;
@@ -41,7 +46,8 @@ button {
     border-radius: 8px;
     background-color: #4CAF50; /* Cor de fundo do botão */
     color: white;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Suaviza o efeito de transição */
+
 }
 
 /* Efeito hover no botão */

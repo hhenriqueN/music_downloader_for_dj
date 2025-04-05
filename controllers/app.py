@@ -26,34 +26,33 @@ def track_list():
 
 @app.route('/instalar_musica', methods=['POST'])
 def instalar_musica():
-
     musica = request.form.get('musica')
-
     pasta_destino = 'downloads'
+    
+    # Variável de status para informar o frontend
+    status_musica_instalada = "O Download de sua música foi completo!"
 
+    # Inicia o processo de instalação
     buscar_e_baixar_musica(musica, pasta_destino)
 
-    return '', 200
+    # Redireciona para a página de status de instalação (após a instalação)
+    return render_template('download_musica_completo.html', status_musica_instalada=status_musica_instalada)
 
 @app.route('/instalar_lista_musicas', methods=['POST'])
 def instalar_lista_musicas():
-
     musicas = request.form.get('musicas')
-
     pasta_destino = 'downloads'
 
+    # Variável de status para informar o frontend
+    status_lista_instalada = "O Download de suas músicas foi completo!"
+
+    # Inicia o processo de instalação
     lista_musicas = musicas.splitlines()
-
-    # Imprime a lista de músicas
-    print("Músicas recebidas:")
     for musica in lista_musicas:
-        print(musica)
+        buscar_e_baixar_musica(musica, pasta_destino)
 
-
-    for indice, musica in enumerate(lista_musicas):
-        buscar_e_baixar_musicas(musica, indice, pasta_destino)
-
-    return '', 200
+    # Redireciona para a página de status de instalação (após a instalação)
+    return render_template('download_lista_completo.html', status_lista_instalada=status_lista_instalada)
 
     
     
